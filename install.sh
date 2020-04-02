@@ -2,7 +2,7 @@
 make
 sudo make install
 
-if [[ ! -e ~/.config/sxiv ]]; then
+if [[ ! -d ~/.config/sxiv ]]; then
   mkdir -p ~/.config/sxiv
 fi
 
