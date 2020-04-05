@@ -1,17 +1,17 @@
-26,32c26,33
-<   "C-c")      while read file; do xclip -selection clipboard -target image/png "$file"; done ;;
-<   "C-g")      tr '\n' '\0' | xargs -0 gimp & ;;
-<   "C-period") rotate  90 ;;
-<   "C-w")      while read file; do wal -i $file --saturate 0.9; done ;;
-<   "C-t")      while read file; do wal -i $file --saturate 0.9 --backend colorthief; done ;;
-<   "C-z")      while read file; do wal -i $file --saturate 0.9 --backend colorz; done ;;
-< 
+26,33c26,32
+< "C-x")      xclip -in -filter | tr '\n' ' ' | xclip -in -selection clipboard ;;
+< "C-c")      while read file; do xclip -selection clipboard -target image/png "$file"; done ;;
+< "C-e")      while read file; do urxvt -bg "#444" -fg "#eee" -sl 0 -title "$file" -e sh -c "exiv2 pr -q -pa '$file' | less" & done ;;
+< "C-g")      tr '\n' '\0' | xargs -0 gimp & ;;
+< "C-r")      while read file; do rawtherapee "$file" & done ;;
+< "C-comma")  rotate 270 ;;
+< "C-period") rotate  90 ;;
+< "C-slash")  rotate 180 ;;
 ---
-> "C-x")      xclip -in -filter | tr '\n' ' ' | xclip -in -selection clipboard ;;
-> "C-c")      while read file; do xclip -selection clipboard -target image/png "$file"; done ;;
-> "C-e")      while read file; do urxvt -bg "#444" -fg "#eee" -sl 0 -title "$file" -e sh -c "exiv2 pr -q -pa '$file' | less" & done ;;
-> "C-g")      tr '\n' '\0' | xargs -0 gimp & ;;
-> "C-r")      while read file; do rawtherapee "$file" & done ;;
-> "C-comma")  rotate 270 ;;
-> "C-period") rotate  90 ;;
-> "C-slash")  rotate 180 ;;
+>   "C-c")      while read file; do xclip -selection clipboard -target image/png "$file"; done ;;
+>   "C-g")      tr '\n' '\0' | xargs -0 gimp & ;;
+>   "C-period") rotate  90 ;;
+>   "C-w")      while read file; do wal -i $file --saturate 0.9; done ;;
+>   "C-t")      while read file; do wal -i $file --saturate 0.9 --backend colorthief; done ;;
+>   "C-z")      while read file; do wal -i $file --saturate 0.9 --backend colorz; done ;;
+> 
